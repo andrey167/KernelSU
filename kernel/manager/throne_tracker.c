@@ -13,7 +13,23 @@ static char cached_manager_apk_path[DATA_PATH_LEN];
 	!strncmp(tgt, name, sizeof(name));		\
 })
 #define is_kowsu_apk(tgt) extra_manager_apk(tgt, "com.kowx712.supermanager")
-#define test_extra_pkgs(tgt) is_kowsu_apk(tgt)
+#define is_midorisu_apk(tgt) extra_manager_apk(tgt, "com.midori.supermanager")
+#define is_ksun_apk(tgt) \
+(extra_manager_apk(tgt, "com.rifsxd.ksunext") || \
+	 extra_manager_apk(tgt, "kqvdie.zeykvw.hpbcyd") || \
+	 extra_manager_apk(tgt, "weonse.bxmfmy.qeomje"))
+#define is_next_apk(tgt) \
+	(extra_manager_apk(tgt, "id.next.manager") || \
+	 extra_manager_apk(tgt, "id.i.bi"))
+#define is_bksu_apk(tgt) extra_manager_apk(tgt, "com.resukisu.resukisu")
+#define is_mambosu_apk(tgt) extra_manager_apk(tgt, "com.rapli.mambosu")
+#define is_fin_asu_apk(tgt) extra_manager_apk(tgt, "me.yuki.fina")
+#define is_originsu_apk(tgt) extra_manager_apk(tgt, "com.originsu.manager")
+#define test_extra_pkgs(tgt) \
+        (is_kowsu_apk(tgt) || is_midorisu_apk(tgt) || \
+        is_ksun_apk(tgt) || is_bksu_apk(tgt) || is_next_apk(tgt) || \
+        is_mambosu_apk(tgt) || is_fin_asu_apk(tgt) || \
+        is_originsu_apk(tgt))
 
 #define SYSTEM_PACKAGES_LIST_PATH "/data/system/packages.list"
 

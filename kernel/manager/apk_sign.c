@@ -321,15 +321,44 @@ bool is_manager_apk(char *path)
 {
 	// dummy.keystore
 	if (check_v2_signature(path, 0x363, "4359c171f32543394cbc23ef908c4bb94cad7c8087002ba164c8230948c21549"))
-		return true;
+		return KSU_MANAGER_XXSU;
 
 	// kernelsu official
 	if (check_v2_signature(path, EXPECTED_SIZE, EXPECTED_HASH))
-		return true;
+		return KSU_MANAGER_XXSU;
 
 	// KOWX712/KernelSU
 	if (check_v2_signature(path, 0x375, "484fcba6e6c43b1fb09700633bf2fb4758f13cb0b2f4457b80d075084b26c588"))
-		return true;
+		return KSU_MANAGER_XXSU;
 
+	// midori01/KernelSU
+	if (check_v2_signature(path, 0x0368, "b9ee6759de4794f954883458b722b97ae6527cb7709a051db9a2348c0eea1e42"))
+		return KSU_MANAGER_XXSU;
+
+
+	// rifsxd/KernelSU-Next
+	if (check_v2_signature(path, 0x3e6, "79e590113c4c4c0c222978e413a5faa801666957b1212a328e46c00c69821bf7"))
+		return KSU_MANAGER_KSUN;
+	
+   // ThRE-Team/KernelSU-Next
+	if (check_v2_signature(path, 0x31c, "1ab6077099505a4f5ff851732d5d965a4908af7f60c871f23b4b3a58e80e6cd3"))
+           return KSU_MANAGER_KSUN;
+
+	// RapliVx/KernelSU
+	if (check_v2_signature(path, 0x384, "a9462b8b98ea1ca7901b0cbdcebfaa35f0aa95e51b01d66e6b6d2c81b97746d8"))
+		return KSU_MANAGER_XXSU;
+
+	// Baka-SU/BakaSU
+    if (check_v2_signature(path, 0x377, "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64"))
+        return KSU_MANAGER_BKSU;
+
+ // LyraVoid/FinaSU
+	if (check_v2_signature(path, 0x2cc, "2d89b50aaf1db013c2b6738f973f48b62ea21a3a8d7216bfec3521065d448458"))
+		return KSU_MANAGER_XXSU;
+		
+	// samakshkambxj/OriginSU
+    if (check_v2_signature(path, 0x51c, "d91ed440459ff575f9bbdb0b294f8d679b1591a37538aafcf1d0073da5dbe968"))
+        return KSU_MANAGER_BKSU;
+	
 	return false;
 }
