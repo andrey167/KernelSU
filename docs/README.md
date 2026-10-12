@@ -2,14 +2,6 @@
 
 <img src="https://kernelsu.org/logo.png" style="width: 96px;" alt="logo">A kernel-based root solution for Android devices.
 
-<p align="center">
-  <a href="https://t.me/MasMasBertelur">
-    <img src="https://img.shields.io/badge/Telegram-26A5E4?style=flat&logo=telegram&logoColor=white" />
-  </a>
-  <a href="https://sociabuzz.com/manipulator/tribe">
-    <img src="https://img.shields.io/badge/Coffee-SociaBuzz-orange?style=flat&logo=buymeac&logoColor=white" />
-  </a>
-</p>
 
 ---
 
@@ -23,7 +15,7 @@ This project uses an enhanced integration method based on
 Run this inside your kernel source:
 
 ```sh
-curl -LSs "https://raw.githubusercontent.com/manipvlator/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
+curl -LSs "https://raw.githubusercontent.com/andrey167/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
 ```
 
 This will automatically integrate KernelSU using the syscall method.
@@ -38,6 +30,7 @@ This will automatically integrate KernelSU using the syscall method.
 - [MamboSU](https://t.me/WebsArch)
 - [xxKSU](https://github.com/backslashxx/KernelSU/releases)
 - [BakaSU](https://t.me/BakaSU_Grp/4)
+- [Next-Manager](https://github.com/ThRE-Team/KernelSU-Next)
 
 ---
 
