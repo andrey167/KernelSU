@@ -13,10 +13,10 @@ $(info -- MDIR: $(MDIR))
 
 # compliant to last upstream kernel change as of 0a1f3ff
 KSU_VERSION := 32676
-KSU_VERSION_TAG := v3.3.0
-KSU_KSUN_TAG := v3.4.0
+KSU_VERSION_TAG := v3.3.1
+KSU_KSUN_TAG := v3.4.2
 KSU_BKSU_TAG := v4.2.0
-KSU_KSUN_VERSION := $(shell echo $$(($(KSU_VERSION) + 662)))
+KSU_KSUN_VERSION := $(shell echo $$(($(KSU_VERSION) + 679)))
 KSU_BKSU_VERSION := $(shell echo $$(($(KSU_VERSION) + 2550)))
 
 ccflags-y += -DKSU_VERSION=$(KSU_VERSION) -DKSU_VERSION_TAG=\"$(KSU_VERSION_TAG)\" \
